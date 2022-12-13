@@ -1,0 +1,19 @@
+h1#top{
+    background-color: black; 
+    color: white;
+}
+h1#top span{
+    color:aqua;
+}
+h2#middle{
+    background-color: rebeccapurple; 
+    color: white; 
+    text-align: center; 
+    font-style: italic;
+}
+h2#bottom{
+    background-color: lightcyan; 
+    color:blue; 
+    text-align:end; 
+    text-decoration:underline
+}
