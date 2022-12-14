@@ -1,0 +1,26 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+img.octocat {
+    height: 200px;
+}
+h1, p{
+    margin: 10px;
+    text-align: center;
+}
+.container{
+    width: 700px;
+    height: 700px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color:blanchedalmond;
+}
+.row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
