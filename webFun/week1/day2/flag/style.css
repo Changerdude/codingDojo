@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+.flag{
+    margin: 10px;
+    height: 400px;
+    width: 550px;
+    border: 2px solid black;
+}
+.iGreen, .iWhite, .iRed{
+    display: inline-block;
+    
+    height: 100%;
+    
+}
+.iGreen{
+    background-color: green;
+    width: 33%;
+}
+.iWhite{
+    background-color:white;
+    width: 32.5%;
+
+}
+.iRed{
+    background-color:darkred;
+    width: 33%;
+}
