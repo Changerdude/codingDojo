@@ -51,8 +51,8 @@ li>a{
 
 .card{
     margin: 25px;
-    width:400px;
-    height: 250px;
+    width:450px;
+    /* height: 250px; */
     border: 2px solid black;
     background-color: white;
     display: flex;
@@ -70,14 +70,23 @@ li>a{
     left: 25px;
     border-radius: 50%;
 }
-.card>.cardBottom>p{
-    margin-bottom: 10px;
-}
+
 .location{
     font-size: larger;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 .cardBottom{
-    padding: 30px 0 0 25px;
+    padding: 20px 0 20px 25px;
+}
+.greyCardBottom{
+    padding: 10px 0 20px 25px;
+}
+.marginTop{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
 }
 p>img{
     height: 20px;
@@ -87,8 +96,7 @@ p>img{
 
 .skinnyCard{
     margin: 25px;
-    width:200px;
-    /* height: 250px; */
+    width:250px;
     border: 2px solid black;
     background-color: white;
     display: flex;
@@ -103,20 +111,36 @@ p>img{
     gap:5px;
     color: white;
 }
+#education{
+    padding-left: 20px;
+    justify-content: start;
+}
+.makeGrey{
+    color:grey;
+}
 .greyBubble{
     background-color: grey;
     border-radius: 50%;
     height: 50%;
     width: 20px;
     text-align: center;
-    
+}
+button{
+    color: white;
+    border: 2px solid gray;
+}
+#wideBubble{
+    width: 40px;
 }
 .cardRow{
-    margin: 5px;
+    padding: 5px;
     display:flex;
     align-items: center;
     justify-content: space-between;
     
+}
+.cardRowBorder{
+    border-top: 2px solid grey;
 }
 
 .addFlexAround{
