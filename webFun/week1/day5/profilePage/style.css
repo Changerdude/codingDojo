@@ -116,11 +116,14 @@ p>img{
     display:flex;
     align-items: center;
     justify-content: space-between;
+    
 }
 
 .addFlexAround{
     display: flex;
+    align-items: center;
     justify-content: space-around;
+    gap:3px;
 }
 
 .smallProfile{
