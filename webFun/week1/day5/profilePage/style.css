@@ -1,0 +1,131 @@
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(Roboto-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto-Regular;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+.nav{
+    
+    width: 100%;
+    padding: 20px;
+    background-color:#3b3a3a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+li{
+    margin-left: 15px;
+}
+li>a{
+    color:white;
+    text-decoration: none;
+}
+.btn{
+    border: 2px solid black;
+    padding: 1px 10px;
+    background-color:cornflowerblue;
+    color: white;
+    box-shadow: 2px 2px black;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    margin: 25px;
+    width:400px;
+    height: 250px;
+    border: 2px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.card>.cardTop{
+    height: 70px;
+    background-color: cornflowerblue;
+}
+.profilePicture{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 35px;
+    left: 25px;
+    border-radius: 50%;
+}
+.card>.cardBottom>p{
+    margin-bottom: 10px;
+}
+.location{
+    font-size: larger;
+}
+.cardBottom{
+    padding: 30px 0 0 25px;
+}
+p>img{
+    height: 20px;
+    width: 20px;
+}
+
+
+.skinnyCard{
+    margin: 25px;
+    width:200px;
+    /* height: 250px; */
+    border: 2px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.darkCardTop{
+    height: 40px;
+    background-color:#3b3a3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+    color: white;
+}
+.greyBubble{
+    background-color: grey;
+    border-radius: 50%;
+    height: 50%;
+    width: 20px;
+    text-align: center;
+    
+}
+.cardRow{
+    margin: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.addFlexAround{
+    display: flex;
+    justify-content: space-around;
+}
+
+.smallProfile{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
