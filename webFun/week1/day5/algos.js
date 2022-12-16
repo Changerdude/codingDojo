@@ -23,11 +23,14 @@ function reverse(arr){
         arr[arr.length-1-i] = arr[i];
         arr[i] = temp;
     }
+    return arr;
+
     // var arr2 =[];
     // for(var x= arr.length-1; x >= 0; x--){
     //     arr2.push(arr[x]);
     // }
-    return arr;
+    // return arr2;
+    
     // return arr.reverse();
 }
 
