@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+}
+.container{
+    width: 950px;
+    display: flex;
+    flex-direction: column;
+}
+.nav{
+    background-color: gray;
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#searchBar{
+    width: 350px;
+}
+.btn{
+padding: 5px 10px;
+border: 2px solid black;
+box-shadow: 2px 2px black;
+}
+.blue{
+    background-color: cornflowerblue;
+    color: white;
+    width: 70px;
+}
+.yellow{
+    background-color: goldenrod;
+}
+.green{
+    background-color:darkseagreen;
+    visibility: visible;
+}
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 0 33px;
+}
+.card{
+    margin-top: 30px;
+    border: 2px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardColumn{
+    flex-direction: column;
+    padding: 15px;
+}
+.word{
+    margin: 15px 15px;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.definition{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.larger{
+    font-size: larger;
+    margin-bottom: 20px;
+}

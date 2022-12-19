@@ -6,51 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="nav">
             <h1>Dojonary</h1>
-            <input type="text" placeholder="Search">
-            <button class="btn blue">Login</button>
+            <input type="text" placeholder="Search" id="searchBar">
+            <button class="btn blue" onmouseover="lightBlue(this)" onmouseleave="returnBlue(this)" onclick="toggleLog(this)">Login</button>
         </div>
         <div class="main">
             <div class="left">
                 <div class="card">
-                    <div class="cardRow">
-                        <div class="word">
-                            <h2>ninja</h2>
-                            <p>noun</p>
-                            <p>Plural:<em>ninjas</em></p>
-                        </div>
-                        <div class="definition">
-                            A practitioner skilled in the <a href="https://en.wikipedia.org/wiki/Japan">Japanese</a> art of <a href="https://en.wikipedia.org/wiki/Ninjutsu">ninjutsu</a>
-                        </div>
+                    <div class="word">
+                        <h2>ninja</h2>
+                        <p>noun</p>
+                        <p>Plural:<em>ninjas</em></p>
+                        <button class="btn yellow" onmouseover="lightYellow(this)" onmouseleave="returnYellow(this)">13 likes</button>
                     </div>
-                    <button class="btn yellow">13 likes</button>
+                    <div class="definition">
+                        A practitioner skilled in the&nbsp;<a href="https://en.wikipedia.org/wiki/Japan">Japanese</a>&nbsp;art of&nbsp;<a href="https://en.wikipedia.org/wiki/Ninjutsu">ninjutsu</a>
+                    </div>
                 </div>
                 <div class="card">
-                    <div class="cardRow">
-                        <div class="word">
-                            <h2>ninja</h2>
-                            <p>noun</p>
-                            <p>Plural:<em>ninjas</em></p>
-                        </div>
-                        <div class="definition">
-                            A <a href="https://en.wikipedia.org/wiki/Programmer">programmer</a> who breaks down problems with <a href="https://en.wikipedia.org/wiki/Zen">zen</a>-like focus
-                        </div>
+                    <div class="word">
+                        <h2>ninja</h2>
+                        <p>noun</p>
+                        <p>Plural:<em>ninjas</em></p>
+                        <button class="btn yellow" onmouseover="lightYellow(this)" onmouseleave="returnYellow(this)">37 likes</button>
                     </div>
-                    <button class="btn yellow">37 likes</button>
+                    <div class="definition">
+                        A&nbsp;<a href="https://en.wikipedia.org/wiki/Programmer">programmer</a>&nbsp;who breaks down problems with&nbsp;<a href="https://en.wikipedia.org/wiki/Zen">zen</a>-like focus
+                    </div>
                 </div>
             </div>
             <div class="right">
-                <div class="card">
+                <div class="card cardColumn">
                     <p class="larger">Dojinary is defined by <strong>YOU</strong></p>
-                    <button class="btn green">Add Definition</button>
+                    <button class="btn green" onmouseover="lightGreen(this)" onmouseleave="returnGreen(this)" onclick="addHidden(this)">Add Definition</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
