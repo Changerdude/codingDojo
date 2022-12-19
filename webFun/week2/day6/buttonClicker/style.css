@@ -80,3 +80,14 @@ box-shadow: 2px 2px black;
     font-size: larger;
     margin-bottom: 20px;
 }
+.alert{
+    z-index: 10;
+    position: absolute;
+    background-color: white;
+    top: 25px;
+    left: 50%;
+    display: none;
+    flex-direction: column;
+    padding: 15px;
+    border: 2px solid black;
+}

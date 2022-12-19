@@ -14,6 +14,10 @@
             <input type="text" placeholder="Search" id="searchBar">
             <button class="btn blue" onmouseover="lightBlue(this)" onmouseleave="returnBlue(this)" onclick="toggleLog(this)">Login</button>
         </div>
+        <div class="alert" id="alert">
+            <p>Ninja was liked!</p>
+            <button onclick="addNone(this.parentElement)">Ok!</button>
+        </div>
         <div class="main">
             <div class="left">
                 <div class="card">
@@ -21,7 +25,7 @@
                         <h2>ninja</h2>
                         <p>noun</p>
                         <p>Plural:<em>ninjas</em></p>
-                        <button class="btn yellow" onmouseover="lightYellow(this)" onmouseleave="returnYellow(this)">13 likes</button>
+                        <button class="btn yellow" onmouseover="lightYellow(this)" onmouseleave="returnYellow(this)" onclick="alertBox()">13 likes</button>
                     </div>
                     <div class="definition">
                         A practitioner skilled in the&nbsp;<a href="https://en.wikipedia.org/wiki/Japan">Japanese</a>&nbsp;art of&nbsp;<a href="https://en.wikipedia.org/wiki/Ninjutsu">ninjutsu</a>
@@ -32,7 +36,7 @@
                         <h2>ninja</h2>
                         <p>noun</p>
                         <p>Plural:<em>ninjas</em></p>
-                        <button class="btn yellow" onmouseover="lightYellow(this)" onmouseleave="returnYellow(this)">37 likes</button>
+                        <button class="btn yellow" onmouseover="lightYellow(this)" onmouseleave="returnYellow(this)" onclick="alertBox()">37 likes</button>
                     </div>
                     <div class="definition">
                         A&nbsp;<a href="https://en.wikipedia.org/wiki/Programmer">programmer</a>&nbsp;who breaks down problems with&nbsp;<a href="https://en.wikipedia.org/wiki/Zen">zen</a>-like focus

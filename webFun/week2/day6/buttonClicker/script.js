@@ -8,6 +8,10 @@ function toggleLog(button){
 function addHidden(button){
     button.style.visibility = "hidden";
 }
+function addNone(alert){
+    console.log(alert);
+    alert.style.display = "none";
+}
 function lightBlue(button){
     button.style.backgroundColor = "lightskyblue";
 }
@@ -25,4 +29,7 @@ function lightGreen(button){
 }
 function returnGreen(button){
     button.style.backgroundColor = "darkseagreen";
+}
+function alertBox(){
+    document.getElementById("alert").style.display = "flex";
 }
