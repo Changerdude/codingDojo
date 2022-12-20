@@ -1,0 +1,165 @@
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(Roboto-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto-Regular;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+}
+.nav{
+    width: 100%;
+    padding: 5px 20px 5px 20px;
+    background-color:#3b3a3a;
+    gap:150px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    
+}
+.sizingNav{
+    width: 760px;
+    /* min-width: 760px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap:20px;
+    justify-content: space-between;
+    align-items: center;
+}
+li{
+    margin-left: 15px;
+}
+li>a{
+    color:white;
+    text-decoration: none;
+}
+.btn{
+    border: 2px solid black;
+    padding: 1px 10px;
+    background-color:cornflowerblue;
+    color: white;
+    box-shadow: 2px 2px black;
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    margin: 25px;
+    width:450px;
+    border: 2px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.cardTop{
+    height: 65px;
+    background-color: cornflowerblue;
+}
+.profilePicture{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 35px;
+    left: 25px;
+    border-radius: 50%;
+    border: 2px solid cornflowerblue;
+}
+.location{
+    font-size: larger;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.cardBottom{
+    padding: 20px 0 20px 25px;
+}
+.greyCardBottom{
+    padding: 10px 0 20px 25px;
+}
+.marginTop{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.icon{
+    height: 20px;
+    width: 20px;
+}
+
+
+.skinnyCard{
+    margin: 25px;
+    width:250px;
+    border: 2px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.darkCardTop{
+    height: 40px;
+    background-color:#3b3a3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+    color: white;
+}
+#education{
+    padding-left: 20px;
+    justify-content: start;
+}
+.makeGrey{
+    color:grey;
+}
+.greyBubble{
+    background-color: grey;
+    border-radius: 50%;
+    height: 50%;
+    width: 20px;
+    text-align: center;
+}
+button{
+    color: white;
+    border: 2px solid gray;
+}
+#wideBubble{
+    width: 50px;
+}
+.cardRow{
+    padding: 5px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.cardRowBorder{
+    border-top: 2px solid grey;
+}
+
+.addFlexAround{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap:3px;
+}
+
+.smallProfile{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
