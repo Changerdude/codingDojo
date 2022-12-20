@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Balsamiq Sans', cursive;
+}
+.container{
+    margin: 0 auto 20px;
+    width: 75%;
+    min-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+.main{
+    width: 100%;
+}
+nav{
+    background-color: cornflowerblue;
+    color: white;
+}
+nav>.container>h1{
+    font-size:2.5em;
+}
+.flexBetween{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cities{
+    gap: 20px;
+}
+.topRow{
+    margin-bottom: 20px;
+    border-bottom: 3px solid black;
+}
+.topRowRight{
+    gap: 10px;
+}
+.card{
+    background-color:darkgrey;
+    flex-direction: column;
+    padding: 1em;
+}
+.card>img{
+    width: 150px;
+    border-radius: 50%;
+    margin: 1em 0;
+}
+.card>h3{
+    margin: .5em 0;
+}
+.temps{
+    margin: 1em 0;
+    gap:2em;
+}
+.tempHigh{
+    color:brown;
+}
+.tempLow{
+    color:blue;
+}
+.cookies{
+    margin-top: 20px;
+    background-color: darkgray;
+    border: 2px solid black;
+    padding: 1em;
+    gap:1em;
+    position: fixed;
+    bottom: 0px;
+    left: 12.5%;
+    right: 12.5%;
+    min-width: 800px;
+    
+}
+.btn{
+    background-color: cornflowerblue;
+    padding: .25em .5em;
+    width: 100px;
+    box-shadow: 2px 2px black;
+}
+.btn:active{
+    transform: translate(2px,2px);
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <h1>DojoWeather</h1>
+            <div class="cities flexBetween">
+                <h2 onclick="loadingReport()">Burbank</h2>
+                <h2 onclick="loadingReport()">Chicago</h2>
+                <h2 onclick="loadingReport()">Dallas</h2>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="main">
+            <div class="topRow flexBetween">
+                <h1>San Jose</h1>
+                <div class="topRowRight flexBetween">
+                    <h3>show temperature in </h3>
+                    <select onchange="tempConv(this)">
+                        <option value="c">°C</option>
+                        <option value="f">°F</option>
+                    </select>
+                </div>
+            </div>
+            <div class="cardRows flexBetween">
+                <div class="card flexBetween">
+                    <h2>Today</h2>
+                    <img src="./assets/some_rain.png" alt="rain cloud">
+                    <h3>some rain</h3>
+                    <div class="temps flexBetween">
+                        <h1 class="tempHigh" id="t1">24°</h1>
+                        <h1 class="tempLow" id="t2">18°</h1>
+                    </div>
+                </div>
+                <div class="card flexBetween">
+                    <h2>Today</h2>
+                    <img src="./assets/some_rain.png" alt="rain cloud">
+                    <h3>some rain</h3>
+                    <div class="temps flexBetween">
+                        <h1 class="tempHigh" id="t3">27°</h1>
+                        <h1 class="tempLow" id="t4">19°</h1>
+                    </div>
+                </div>
+                <div class="card flexBetween">
+                    <h2>Today</h2>
+                    <img src="./assets/some_rain.png" alt="rain cloud">
+                    <h3>some rain</h3>
+                    <div class="temps flexBetween">
+                        <h1 class="tempHigh" id="t5">21°</h1>
+                        <h1 class="tempLow" id="t6">16°</h1>
+                    </div>
+                </div>
+                <div class="card flexBetween">
+                    <h2>Today</h2>
+                    <img src="./assets/some_rain.png" alt="rain cloud">
+                    <h3>some rain</h3>
+                    <div class="temps flexBetween">
+                        <h1 class="tempHigh" id="t7">26°</h1>
+                        <h1 class="tempLow" id="t8">21°</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="cookies flexBetween">
+                <img src="./assets/cookie.png" alt="cookie">
+                <div>
+                    <h3>Stop! Cookie time</h3>
+                    <p>
+                    We use cookies(sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="https:www.google.com">Read more</a>
+                    </p>
+                </div>
+                <button class="btn" onclick="this.parentElement.remove()">I Accept</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
