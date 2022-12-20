@@ -46,8 +46,8 @@ function randomPizza(){
     }
     console.log(selectedToppings);
     var randomPizza = {
-        "crustType":(crusts[Math.floor(Math.random()*3)]),
-        "sauceType":(sauces[Math.floor(Math.random()*4)]),
+        "crustType":(crusts[Math.floor(Math.random()*crusts.length)]),
+        "sauceType":(sauces[Math.floor(Math.random()*sauces.length)]),
         "cheeses":selectedCheeses,
         "toppings":selectedToppings
     }
