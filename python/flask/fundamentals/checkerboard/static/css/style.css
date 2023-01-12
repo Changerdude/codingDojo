@@ -1,0 +1,19 @@
+
+h1{
+    text-align: center; 
+}
+.center_content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    height: 100px;
+    width: 100px;
+}
+.red{
+    background-color: red;
+}
+.black{
+    background-color: black;
+}
