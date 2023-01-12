@@ -29,9 +29,9 @@ def repeat(num,input_str):
         result += " " + input_str
     return result
 
-@app.route('/<path>')          #Wildcard I believe would eat any other request if it was at or near the top
-def wildcard_error(path):      #Needs to be at the bottom to be the last route tried
-    return f"Sorry! No response from {path}. Try again."
+@app.route('/<path:u_path>')          #Wildcard I believe would eat any other request if it was at or near the top
+def wildcard_error(u_path):      #Needs to be at the bottom to be the last route tried
+    return f"Sorry! No response from {u_path}. Try again."
 
 if __name__=="__main__":
     app.run(debug=True)
