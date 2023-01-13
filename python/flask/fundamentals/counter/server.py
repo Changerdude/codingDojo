@@ -20,7 +20,8 @@ def increment():
 
 @app.route('/change_increment', methods=['POST'])
 def change_increment():
-    session["increment"] = int(request.form["new_increment"])
+    if len(request.form["new_increment"]) > 0:
+        session["increment"] = int(request.form["new_increment"])
     return redirect('/')
 
 @app.route('/reset', methods=['POST'])
