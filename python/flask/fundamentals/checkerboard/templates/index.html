@@ -7,9 +7,17 @@
     <title>Checkerboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css')}}")>
 </head>
+<style>
+    .color1{
+        background-color: {{ color1 }};
+    }                                {# would love to move color to style.css but dont know how #}
+    .color2{
+        background-color: {{ color2 }};
+    }
+</style>
 <body>
     <div class="center_content">
-        <h1 style="background-color: {{ color1 }};">*** Checkerboard ***<h1>
+        <h1 class="color1">*** Checkerboard ***<h1>
     </div>
 
 
@@ -18,9 +26,9 @@
     <div>
         {% for y in range(0,num_col): %}
             {% if (x+y)%2 == 0%}
-                <div class="box" style="background-color: {{ color1 }};"></div> {# would love to move color to css but dont know how #}
+                <div class="box color1"></div>
             {% else %}
-                <div class="box" style="background-color: {{ color2 }};"></div>
+                <div class="box color2"></div>
             {% endif %}
         {% endfor %}
     </div>
