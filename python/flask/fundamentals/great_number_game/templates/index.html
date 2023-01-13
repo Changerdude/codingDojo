@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Great Number Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container text-center">
+        <h1 class="m-4">The Great Number Game</h1>
+        <h3 class="m-2">I am thinking of a number between 1 and 100</h3>
+        {% if session["count"] < session["amount_of_guesses"] %}
+            {% if session["guess"] == "low" %}
+                <div class="alert alert-danger col-sm-6 offset-sm-3" role="alert">
+                    Guess {{session["last_guess"]}} was too low!
+                </div>
+            {% endif %}
+            {% if session["guess"] == "high" %}
+                <div class="alert alert-warning col-sm-6 offset-sm-3" role="alert">
+                    Guess {{session["last_guess"]}} was too high!
+                </div>
+            {% endif %}
+            {% if session["guess"] == "win" %}
+                <div class="card text-center bg-success col-sm-6 offset-sm-3">
+                    <div class="card-body">
+                        <form action="/reset" method="get">
+                            <h5 class="card-title">Guessed the number {{session["number"]}}!</h5>
+                            <p class="card-text">Only took {{session["count"]}} turns</p>
+                            <button class="btn btn-light">Try Again?</button>
+                        </form>
+                    </div>
+                </div>
+            {% else %}
+                <div class="card text-center bg-secondary col-sm-6 offset-sm-3">
+                    <div class="card-body">
+                        <form action="/guess" method="post">
+                            <h5 class="card-title">Guess a Number</h5>
+                            <input type="number" name="num_guess" id="num_guess">
+                            <button class="btn btn-success">Guess</button>
+                        </form>
+                    </div>
+                </div>
+            {% endif %}
+        {% else %}
+        <div class="card text-center bg-dark col-sm-6 offset-sm-3">
+            <div class="card-body">
+                <form action="/reset" method="get">
+                    <h5 class="card-title text-light">Failed to guess {{session["number"]}}</h5>
+                    <button class="btn btn-light">Try Again?</button>
+                </form>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
