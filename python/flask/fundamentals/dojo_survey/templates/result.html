@@ -28,12 +28,12 @@
                         <td>{{session["hours_spent"]}}</td>
                     </tr>
                     <tr>
-                        <td>Did you attend today?:</td>
+                        <td>Days attended:</td>
                         <td>
                             {% if "attend" in session %}
                                 {{session["attend"]}}
                             {% else %}
-                                No
+                                Zero
                             {% endif %}
                         </td>
                     </tr>

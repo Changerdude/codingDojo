@@ -17,12 +17,24 @@ def get_result():
     session["dojo_location"] = request.form["dojo_location"]
     session["fav_language"] = request.form["fav_language"]
     session["hours_spent"] = request.form["hours_spent"]
-    if "attend" in request.form:
-        session["attend"] = request.form["attend"]
+    if "mon" in request.form:
+        add_day()
+    if "tue" in request.form:
+        add_day()
+    if "wed" in request.form:
+        add_day()
+    if "thu" in request.form:
+        add_day()
+    if "fri" in request.form:
+        add_day()
     session["comments"] = request.form["comments"]
     return redirect('/result')
 
-
+def add_day():
+    if "attend" in session:
+        session["attend"] += 1
+    else:
+        session["attend"] = 1
 
 if __name__=="__main__":
     app.run(debug=True)
