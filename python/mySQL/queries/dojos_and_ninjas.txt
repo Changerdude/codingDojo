@@ -1,0 +1,9 @@
+INSERT INTO dojos (name) VALUES ("NORTH"),("EAST"),("WEST");
+DELETE FROM dojos;
+INSERT INTO dojos (name) VALUES ("NORTHEAST"),("EAST"),("SOUTHEAST");
+INSERT INTO ninjas (first_name,last_name,age,dojo_id) VALUES ("J","J",22,4),("S","S",26,4),("Z","Z",55,4);
+INSERT INTO ninjas (first_name,last_name,age,dojo_id) VALUES ("H","H",32,5),("F","F",44,5),("G","G",23,5);
+INSERT INTO ninjas (first_name,last_name,age,dojo_id) VALUES ("A","A",20,6),("L","L",66,6),("K","K",28,6);
+SELECT * FROM ninjas WHERE dojo_id = 4;
+SELECT * FROM ninjas WHERE dojo_id = 6;
+SELECT ninjas.first_name as ninja_first_name,ninjas.last_name as ninja_last_name,dojos.name as dojo_name FROM ninjas JOIN dojos ON ninjas.dojo_id = dojos.id ORDER BY ninjas.id DESC LIMIT 1;
