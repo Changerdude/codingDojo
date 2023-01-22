@@ -21,7 +21,6 @@ def show_book(id):
         "id" : id
     }
     book = Book.get_one_with_favorited(data)
-    print(book)
     return render_template("show_books.html", book = book, add_fav = Book.get_nonfavorited_authors(data))
 
 @app.route("/books/fav", methods=["POST"])

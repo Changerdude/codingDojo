@@ -50,5 +50,3 @@ class Book:
         for author in results:
             authors.append( model_author.Author(author))
         return authors
-
-    #TODO Add update favoried

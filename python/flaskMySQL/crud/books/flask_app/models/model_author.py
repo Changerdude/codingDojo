@@ -22,7 +22,6 @@ class Author:
         results = connectToMySQL(DATABASE).query_db(query)
         authors = []
         for author in results:
-            print(author)
             authors.append( cls(author) )
         return authors
 
@@ -40,7 +39,6 @@ class Author:
                 "updated_at" : row["books.updated_at"]
             }
             author.favorites.append( model_book.Book( book ))
-        print(author)
         return author
 
     @classmethod
@@ -50,5 +48,4 @@ class Author:
         books = []
         for book in results:
             books.append( model_book.Book(book))
-        print(books)
         return books
