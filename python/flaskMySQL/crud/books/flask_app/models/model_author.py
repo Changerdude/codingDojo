@@ -40,15 +40,15 @@ class Author:
                 "updated_at" : row["books.updated_at"]
             }
             author.favorites.append( model_book.Book( book ))
+        print(author)
         return author
 
     @classmethod
     def get_nonfavorite_books(cls,data):
-        query = "SELECT * FROM books WHERE books.id NOT IN (SELECT book_id FROM favories WHERE author_id = %(id)s)"
+        query = "SELECT * FROM books WHERE books.id NOT IN (SELECT book_id FROM favorites WHERE author_id = %(id)s)"
         results = connectToMySQL(DATABASE).query_db( query, data)
         books = []
         for book in results:
             books.append( model_book.Book(book))
+        print(books)
         return books
-
-    #TODO Add update favorites

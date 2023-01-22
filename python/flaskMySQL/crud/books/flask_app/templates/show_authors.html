@@ -11,7 +11,7 @@
     <div class="container bg-dark text-light rounded-4 p-5 mt-4">
         <div class="row">
             <div class="col-sm-6">
-                <h1 class="mb-4">{{author.name}}'s Favorites</h1>
+                <h1 class="mb-4">{{author.first_name}} {{author.last_name}}'s Favorites</h1>
                 <table class="table bordered-table table-hover table-dark mb-4">
                     <thead>
                         <th>Title</th>
@@ -28,12 +28,13 @@
             <div class="col-sm-6">
                 <h1 class="mb-4">Add New Favorite</h1>
                 <form action="/authors/fav" method="post">
+                    <input type="hidden" name="author_id" id="author_id" value="{{author.id}}">
                     <div class="row mb-4">
                         <label for="book" class="col-form-label col-sm-2">Book:</label>
                         <div class="col-sm-10">
-                            <select name="book" id="book" class="form-select">
+                            <select name="book_id" id="book_id" class="form-select">
                                 <option value="" disabled selected>-Select New Book-</option>
-                                {% for book in new_fav %}
+                                {% for book in add_fav %}
                                     <option value="{{book.id}}">{{book.title}}</option>
                                 {% endfor %}
                             </select>
