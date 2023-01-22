@@ -4,34 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dojos</title>
+    <title>Authors</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
     <div class="container bg-dark text-light rounded-4 p-5 mt-4">
         <div class="row">
             <div class="col-sm-6">
-                <h1 class="mb-4">New Dojo</h1>
-                <form action="/dojos/create" method="post">
+                <h1 class="mb-4">New Author</h1>
+                <form action="/authors/create" method="post">
                     <div class="row mb-3">
-                        <label for="name" class="col-form-label col-sm-2">Name:</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="name" id="name">
+                        <label for="first_name" class="col-form-label col-sm-3">First Name:</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="first_name" id="first_name" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="last_name" class="col-form-label col-sm-3">Last Name:</label>
+                        <div class="col-sm-9">
+                            <input type="text" name="last_name" id="last_name" class="form-control">
                         </div>
                     </div>
                     <button class="btn btn-light">Create</button>
                 </form>
             </div>
             <div class="col-sm-6">
-                <h1 class="mb-4">All Dojos</h1>
+                <h1 class="mb-4">All Authors</h1>
                 <div class="container border mb-4">
-                    {% for dojo in dojos%}
+                    {% for author in authors%}
                         <div class="my-2">
-                            <a href="/dojos/show/{{dojo.id}}">{{dojo.name}}</a>
+                            <a href="/authors/show/{{author.id}}">{{author.first_name}} {{author.last_name}}</a>
                         </div>
                     {% endfor %}
                 </div>
-                <a href="/ninjas/new" class="link-info">Add Ninja</a>
+                <a href="/books" class="link-info">Add Book</a>
             </div>
         </div>
     </div>
