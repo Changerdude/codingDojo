@@ -8,6 +8,9 @@
 </head>
 <body>
     <div class="container mt-4 p-3 bg-dark rounded-4">
+        {% for message in get_flashed_messages(category_filter=["succ_email_create"]) %}
+                    <p class="err-msg text-success">{{message}}</p>
+        {% endfor %}
         <table class="table table-bordered table-dark table-hover">
             <thead>
                 <th>Email</th>
@@ -18,6 +21,7 @@
             <tr>
                 <td>{{email.email}}</td>
                 <td>{{email.created_at}}</td>
+                <td><a href="/emails/delete/{{email.id}}" class="link-danger">Delete</a></td>
             </tr>
             {% endfor %}
             </tbody>

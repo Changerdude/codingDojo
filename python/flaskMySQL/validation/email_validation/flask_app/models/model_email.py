@@ -26,6 +26,11 @@ class Email:
             emails.append( cls(email) )
         return emails
 
+    @classmethod
+    def emails_delete(cls,data):
+        query = "DELETE FROM emails WHERE id = %(id)s"
+        return connectToMySQL(DATABASE).query_db( query, data )
+
 
     @classmethod
     def validate_form(cls,data):
@@ -46,18 +51,3 @@ class Email:
         query = "SELECT * FROM emails WHERE email = %(email)s"
         results = connectToMySQL(DATABASE).query_db( query, data)
         return results
-
-    @staticmethod
-    def get_attend(data):
-        days = 0
-        if "mon" in data:
-            days += 1
-        if "tue" in data:
-            days += 1
-        if "wed" in data:
-            days += 1
-        if "thu" in data:
-            days += 1
-        if "fri" in data:
-            days += 1
-        return days

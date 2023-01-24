@@ -11,6 +11,7 @@ def emails_val():
     if not Email.validate_form(data):
         return redirect("/")
     Email.create(data)
+    flash(f"Your email {data['email']} was valid. Thank you!", "succ_email_create")
     return redirect('/emails/show')
 
 @app.route('/')
@@ -20,3 +21,11 @@ def default():
 @app.route('/emails/show')
 def emails_show():
     return render_template("emails.html", emails=Email.get_emails())
+
+@app.route('/emails/delete/<int:id>')
+def emails_delete(id):
+    data = {
+        "id" : id
+    }
+    Email.emails_delete(data)
+    return redirect('/emails/show')
