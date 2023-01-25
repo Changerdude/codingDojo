@@ -55,13 +55,13 @@ class Recipe:
     @classmethod
     def validate_form(cls,data):
         is_valid = True
-        if len(data['name']) < 1:
+        if len(data['name']) < 3:
             flash("Needs a name", "err_recipe_name")
             is_valid = False
-        if len(data['description']) < 1:
+        if len(data['description']) < 3:
             flash("Needs a description", "err_recipe_description")
             is_valid = False
-        if len(data['instructions']) < 1:
+        if len(data['instructions']) < 3:
             flash("Needs instructions", "err_recipe_instructions")
             is_valid = False
         if len(data['date_made']) < 1:
