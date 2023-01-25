@@ -12,6 +12,7 @@ class Recipe:
         self.date_made = data['date_made']
         self.under = data['under']
         self.user_id = data['user_id']
+        self.posted_by = ''
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
 
@@ -26,9 +27,10 @@ class Recipe:
         results = connectToMySQL(DATABASE).query_db( query )
         recipes = []
         for recipe in results:
+            recipe = cls(recipe)
             recipe_user = model_user.User.get_user({'id' :recipe.user_id})
-            recipe["posted_by"] = recipe_user.first_name
-            recipes.append( cls(recipe) )
+            recipe.posted_by = recipe_user.first_name
+            recipes.append( recipe )
         return recipes
 
     @classmethod
@@ -36,8 +38,8 @@ class Recipe:
         query = "SELECT * FROM recipes WHERE id = %(id)s"
         result = connectToMySQL(DATABASE).query_db( query, data )
         recipe = cls(result[0])
-        recipe_user = recipe.user_id
-        recipe["posted_by"] = recipe_user.first_name
+        recipe_user = model_user.User.get_user({'id' :recipe.user_id})
+        recipe.posted_by = recipe_user.first_name
         return recipe
 
     @classmethod
@@ -49,3 +51,20 @@ class Recipe:
     def delete_recipe(cls,data):
         query = "DELETE FROM recipes WHERE id = %(id)s"
         connectToMySQL(DATABASE).query_db( query, data )
+
+    @classmethod
+    def validate_form(cls,data):
+        is_valid = True
+        if len(data['name']) < 1:
+            flash("Needs a name", "err_recipe_name")
+            is_valid = False
+        if len(data['description']) < 1:
+            flash("Needs a description", "err_recipe_description")
+            is_valid = False
+        if len(data['instructions']) < 1:
+            flash("Needs instructions", "err_recipe_instructions")
+            is_valid = False
+        if len(data['date_made']) < 1:
+            flash("Needs a date", "err_recipe_date_made")
+            is_valid = False
+        return is_valid

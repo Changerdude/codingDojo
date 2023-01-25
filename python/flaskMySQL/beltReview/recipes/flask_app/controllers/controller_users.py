@@ -1,4 +1,4 @@
-from flask_app import app,bcrypt,TEN_YEARS_AGO
+from flask_app import app,bcrypt
 from flask_app.models.model_user import User
 from flask import session,render_template,redirect,request,flash
 

@@ -15,31 +15,45 @@
                 <a href="/logout" class="btn btn-light mx-4">Logout</a>
             </div>
         </div>
-        <form class="d-flex justify-content-between p-3">
+        <form action="/recipe/update" method="post" class="d-flex justify-content-between p-3">
             <div class="col-sm-6">
                 <div class="row mb-4">
                     <label for="name" class="col-form-label col-sm-2">Name:</label>
                     <div class="col-sm-10">
                         <input type="text" name="name" id="name" class="form-control" value="{{recipe.name}}">
+                        {% for message in get_flashed_messages(category_filter=["err_recipe_name"]) %}
+                            <p class="err-msg text-danger">{{message}}</p>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="row mb-4">
                     <label for="description" class="col-form-label col-sm-2">Description:</label>
                     <div class="col-sm-10">
                         <textarea name="description" id="description" cols="30" rows="7" class="form-control">{{recipe.description}}</textarea>
+                        {% for message in get_flashed_messages(category_filter=["err_recipe_description"]) %}
+                            <p class="err-msg text-danger">{{message}}</p>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="row mb-4">
                     <label for="instructions" class="col-form-label col-sm-2">Instructions:</label>
                     <div class="col-sm-10">
                         <textarea name="instructions" id="instructions" cols="30" rows="7" class="form-control">{{recipe.instructions}}</textarea>
+                        {% for message in get_flashed_messages(category_filter=["err_recipe_instructions"]) %}
+                            <p class="err-msg text-danger">{{message}}</p>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
             <div class="col-sm-4 d-flex flex-column justify-content-between">
                 <div>
                     <label for="date_made" class="form-label mx-auto">Date Made:</label>
-                    <input type="date" name="date_made" id="date_made" class="form-control mx-auto mb-4" value="{{recipe.date_made}}">
+                    <div class="mb-4">
+                        <input type="date" name="date_made" id="date_made" class="form-control mx-auto" value="{{recipe.date_made}}">
+                        {% for message in get_flashed_messages(category_filter=["err_recipe_date_made"]) %}
+                            <p class="err-msg text-danger">{{message}}</p>
+                        {% endfor %}
+                    </div>
                     <label for="under" class="form-label mx-auto">Under 30 minutes?</label>
                     <div class="form-check">
                         {% if recipe.under %}
@@ -58,7 +72,7 @@
                         <label for="under_no" class="form-check-label">No</label>
                     </div>
                 </div>
-                <a href="/recipe/create" class="btn btn-light">Update Recipe</a>
+                <button class="btn btn-light">Update Recipe</button>
             </div>
         </form>
     </div>
