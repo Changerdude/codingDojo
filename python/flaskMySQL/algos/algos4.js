@@ -49,7 +49,7 @@ function mode(nums) {
         if(freqTable[key] > highestVal) highestVal = freqTable[key]
     }
     for(let key in freqTable){
-        if(freqTable[key] == highestVal) result.push(key)
+        if(freqTable[key] == highestVal) result.push(parseInt(key))
     }
     if(result.length === Object.keys(freqTable).length && result.length != 1) return [];
     return result;
