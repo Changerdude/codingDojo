@@ -55,6 +55,9 @@ const efc2 = new Effect("Unhandled Promise Rejection",1,"reduce target's resilie
 const efc3 = new Effect("Pair Programming",3,"increase target's power by 2","power",2)
 
 efc1.playEffect(rbn);
-efc2.playEffect(bbn);
+efc2.playEffect(rbn);
 efc3.playEffect(rbn);
 rbn.attack(bbn)
+
+console.log(rbn);
+console.log(bbn);
