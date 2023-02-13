@@ -20,6 +20,7 @@ const Form = props => {
             ? setFirstNameError("Must be at least 2 characters") : setLastNameError("Must be at least 2 characters")
         : e.target.id === "firstName" 
             ? setFirstNameError('') : setLastNameError('');
+        e.target.id === "firstName" ? clear(e,"firstName") : clear(e,"lastName");
     }
     
     const handleEmail = (e) => {
@@ -29,6 +30,7 @@ const Form = props => {
         } else {
             setEmailError('');
         }
+        clear(e,"email");
     }
 
     const handlePw = (e) => {
@@ -45,6 +47,31 @@ const Form = props => {
             ? setConfirmPwError('') : setConfirmPwError('Must match Password')
         : e.target.value === pw
             ? setConfirmPwError('') : setConfirmPwError('Must match Password');
+        
+        e.target.id === 'pw' ? clear(e,"pw") : clear(e,"confirmPw");
+    }
+
+    const clear = (e,id) =>{
+        if(e.target.value.length === 0){
+            switch(id){
+                case 'firstName':
+                    setFirstNameError('');
+                    break;
+                case 'lastName':
+                    setLastNameError('');
+                    break;
+                case 'email':
+                    setEmailError('');
+                    break;
+                case 'pw':
+                    setPwError('');
+                    break;
+                case 'confirmPw':
+                    setConfirmPwError('');
+                    break;
+                default:
+            }
+        }
     }
     
     return (
