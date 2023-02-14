@@ -9,10 +9,15 @@ const BoxForm = props => {
     const submitBox = (e) => {
         e.preventDefault();
         const numSize = parseInt(size);
-        setBoxs([...boxs, {color,size:numSize}])
-
+        if (isColor(color)) setBoxs([...boxs, {color,size:numSize}])
         setColor('');
         setSize('');
+    }
+
+    const isColor = (strColor) => {
+        const s = new Option().style;
+        s.color = strColor;
+        return s.color !== '';
     }
 
     return (
