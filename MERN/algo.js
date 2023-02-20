@@ -102,20 +102,20 @@ function allNonConsecutive(sortedNums) {
   Hard Bonus: make it O(n) time
 */
 
-const nums1 = [1, 1, 1, 2, 2, 3];
-const k1 = 2;
-const expected1 = [1, 2];
-// Explanation: return the two most frequent elements, 1 and 2 are the two most frequent elements
+// const nums1 = [1, 1, 1, 2, 2, 3];
+// const k1 = 2;
+// const expected1 = [1, 2];
+// // Explanation: return the two most frequent elements, 1 and 2 are the two most frequent elements
 
-const nums2 = [0, 0, 0, 2, 2, 3];
-const k2 = 1;
-const expected2 = [0];
-// Explanation: k being 1 means return the single most frequent element
+// const nums2 = [0, 0, 0, 2, 2, 3];
+// const k2 = 1;
+// const expected2 = [0];
+// // Explanation: k being 1 means return the single most frequent element
 
-// 6 occurs 6 times, 3 occurs 3 times, 2 occurs 2 times, 1 occurs 1 time.
-const nums3 = [1, 6, 3, 3, 6, 6, 3, 6, 2, 2, 6, 6];
-const k3 = 3;
-const expected3 = [6, 3, 2];
+// // 6 occurs 6 times, 3 occurs 3 times, 2 occurs 2 times, 1 occurs 1 time.
+// const nums3 = [1, 6, 3, 3, 6, 6, 3, 6, 2, 2, 6, 6];
+// const k3 = 3;
+// const expected3 = [6, 3, 2];
 
 /**
  * Returns the k most frequently occurring numbers from the given unordered
@@ -142,6 +142,62 @@ function kMostFrequent(nums, k) {
   return result;
 }
 
-console.log(kMostFrequent(nums1,k1));
-console.log(kMostFrequent(nums2,k2));
-console.log(kMostFrequent(nums3,k3));
+// console.log(kMostFrequent(nums1,k1));
+// console.log(kMostFrequent(nums2,k2));
+// console.log(kMostFrequent(nums3,k3));
+
+/* 
+  Given a table name string and an object whose key value pairs represent column names and values for the columns
+  return a SQL insert statement string
+  
+  Bonus: after solving it, write a 2nd solution focusing on functional programming using built in methods
+*/
+
+const table = "users";
+const insertData1 = { first_name: "John", last_name: "Doe" };
+const expected1 =
+  "INSERT INTO users (first_name, last_name) VALUES ('John', 'Doe');";
+
+// Bonus:
+const insertData2 = {
+  first_name: "John",
+  last_name: "Doe",
+  age: 30,
+  is_admin: false,
+};
+const expected2 =
+  "INSERT INTO users (first_name, last_name, age, is_admin) VALUES ('John', 'Doe', 30, false);";
+// Explanation: no quotes around the int or the bool, technically in SQL the bool would become a 0 or 1, but don't worry about that here.
+
+/**
+ * Generates a SQL insert statement from the inputs
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {string} tableName
+ * @param {Object} columnValuePairs
+ * @returns {string} A string formatted as a SQL insert statement where the
+ *    columns and values are extracted from columnValuePairs.
+ */
+function insert(tableName, columnValuePairs) {
+  let values = ""
+  let variables = ""
+  for(const [key,val] of Object.entries(columnValuePairs)){
+    variables = variables.concat(key + ", ");
+    typeof(val) == 'string' ? values = values.concat("'"+ val + "', ") : values = values.concat(val + ", ")
+  }
+  values = values.slice(0,values.length - 2);
+  variables = variables.slice(0,variables.length - 2);
+  return ('"INSERT INTO ' + tableName +'(' + variables + ') VALUES (' + values + ');"')
+
+}
+
+function insertFunctional(tableName, columnValuePairs){
+  const variables = Object.keys(columnValuePairs).join(", ");
+  const vals = Object.values(columnValuePairs).map((val) =>{
+    return typeof val === "string" ? `'${val}'` : val;
+  }).join(", ")
+
+  return `INSERT INTO ${tableName} (${variables}) VALUES (${vals});`
+}
+console.log(insertFunctional(table, insertData1));
+console.log(insertFunctional(table, insertData2));
