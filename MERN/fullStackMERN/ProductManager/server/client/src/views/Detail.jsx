@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
 import { useParams, Link } from "react-router-dom";
+import DeleteButton from "../components/DeleteButton";
 
 const Detail = props => {
     const { id } = useParams();
-    const { deleteItem } = props;
+    const { refreshList } = props;
     const [product, setProduct] = useState();
 
 
@@ -33,7 +34,7 @@ const Detail = props => {
                         <p className="card-text">{product.description}</p>
                         <Link to={'/'} className="btn btn-primary mx-2">Back</Link>
                         <Link to={`/${product._id}/edit`} className="btn btn-primary mx-2">Edit</Link>
-                        <button className="btn btn-danger mx-2" onClick={() => deleteItem(product._id)}>Delete</button>
+                        <DeleteButton id={product._id} refreshList={refreshList}/>
                     </div>
                 </div>
                 :

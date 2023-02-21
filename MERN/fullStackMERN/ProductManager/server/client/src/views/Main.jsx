@@ -3,13 +3,13 @@ import ProductForm from "../components/ProductForm";
 import ProductList from "../components/ProductList";
 
 const Main = props => {
-    const { deleteItem, productList, refreshList , isEditing} = props;
+    const { productList, refreshList , isEditing} = props;
 
     return (
         <>
         <ProductForm isEditing={isEditing} refreshList={refreshList}/>
         <hr />
-        <ProductList deleteItem={deleteItem} productList={productList}/>
+        <ProductList productList={productList} refreshList={refreshList}/>
         </>
     );
 }

@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import DeleteButton from "./DeleteButton";
 
 const ProductList = props => {
-    const { deleteItem, productList } = props;
+    const { refreshList, productList } = props;
 
     return(
         <>
@@ -18,7 +19,7 @@ const ProductList = props => {
                         <h5 className="card-title">Description:</h5>
                         <p className="card-text">{product.description}</p>
                         <Link to={`/${product._id}/edit`} className="btn btn-primary mx-2">Edit</Link>
-                        <button className="btn btn-danger mx-2" onClick={() => deleteItem(product._id)}>Delete</button>
+                        <DeleteButton id={product._id} refreshList={refreshList} />
                     </div>
                 </div>
             );

@@ -23,27 +23,15 @@ function App() {
                 console.log(err);
             })
   }
-  const deleteItem = (id) => {
-    console.log(id);
-    axios.delete(`http://localhost:8000/api/products/delete/${id}`)
-        .then((res) => {
-            console.log(res.data)
-            refreshList();
-            nav('/')
-        })
-        .catch((err) => {
-            console.log(err);
-        })
-};
 
   return (
     <div className="container w-50 shadow border rounded mx-auto my-2 p-3">
-      <h1>Product Management</h1>
+      <h1 className='text-center'>Product Management</h1>
       <Routes>
-        <Route path='/' element={<Main deleteItem={deleteItem} productList={productList} refreshList={refreshList} isEditing={false}/>} />
-        <Route path='/:id' element={<Detail deleteItem={deleteItem}/>} />
-        <Route path='/:id/edit' element={<Main deleteItem={deleteItem} productList={productList} refreshList={refreshList} isEditing={true}/>} />
-        <Route path='*' element={<h1>Uh oh, Nothing there.</h1>}/>
+        <Route path='/' element={<Main productList={productList} refreshList={refreshList} isEditing={false}/>} />
+        <Route path='/:id' element={<Detail refreshList={refreshList}/>} />
+        <Route path='/:id/edit' element={<Main productList={productList} refreshList={refreshList} isEditing={true}/>} />
+        <Route path='*' element={<h1 className='text-center m-4'>Uh oh, Nothing there.</h1>}/>
       </Routes>
     </div>
   );
