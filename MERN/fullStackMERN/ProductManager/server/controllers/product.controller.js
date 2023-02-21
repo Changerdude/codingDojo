@@ -30,7 +30,6 @@ module.exports.random = (req,res) => {
         })
 }
 module.exports.createProduct = (req,res) => {
-    console.log(req.body);
     Product.create(req.body)
         .then((newProduct) => {
             res.json({ product: newProduct });
