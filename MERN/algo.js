@@ -32,11 +32,11 @@
  *    deduped.
  */
 function orderedIntersection(sortedA, sortedB) {
-    let result = [];
-    for(let i=0; i< sortedA.length;i++){
-        if(sortedB.includes(sortedA[i]) && !result.includes(sortedA[i])) result.push(sortedA[i]);
-    }
-    return result;
+  let result = [];
+  for (let i = 0; i < sortedA.length; i++) {
+    if (sortedB.includes(sortedA[i]) && !result.includes(sortedA[i])) result.push(sortedA[i]);
+  }
+  return result;
 }
 
 // console.log(orderedIntersection(numsA1,numsB1));
@@ -79,12 +79,12 @@ function orderedIntersection(sortedA, sortedB) {
  * @returns {NonConsecNums}
  */
 function allNonConsecutive(sortedNums) {
-  if(sortedNums.length<1) return [];
+  if (sortedNums.length < 1) return [];
 
   let result = []
-  for( let i = 1;i<sortedNums.length;i++){
-    if(sortedNums[i] !== (sortedNums[i-1]+1)) {
-      result.push({i:i,n:sortedNums[i]});
+  for (let i = 1; i < sortedNums.length; i++) {
+    if (sortedNums[i] !== (sortedNums[i - 1] + 1)) {
+      result.push({ i: i, n: sortedNums[i] });
     }
   }
   return result;
@@ -128,14 +128,14 @@ function allNonConsecutive(sortedNums) {
  */
 function kMostFrequent(nums, k) {
   const freqTable = new Map();
-  freqTable.set(nums[0],1);
-  for(let i = 1; i < nums.length;i++){
-    freqTable.has(nums[i]) ? freqTable.set(nums[i],freqTable.get(nums[i])+1) : freqTable.set(nums[i], 1);
+  freqTable.set(nums[0], 1);
+  for (let i = 1; i < nums.length; i++) {
+    freqTable.has(nums[i]) ? freqTable.set(nums[i], freqTable.get(nums[i]) + 1) : freqTable.set(nums[i], 1);
   }
   const freqSort = new Map([...freqTable.entries()].sort((a, b) => b[1] - a[1]));
   let result = [];
   const iter = freqSort.entries();
-  for(let i = 0; i < k ; i++){
+  for (let i = 0; i < k; i++) {
     result.push(iter.next().value[0]);
     if (result.length === k) break;
   }
@@ -153,21 +153,21 @@ function kMostFrequent(nums, k) {
   Bonus: after solving it, write a 2nd solution focusing on functional programming using built in methods
 */
 
-const table = "users";
-const insertData1 = { first_name: "John", last_name: "Doe" };
-const expected1 =
-  "INSERT INTO users (first_name, last_name) VALUES ('John', 'Doe');";
+// const table = "users";
+// const insertData1 = { first_name: "John", last_name: "Doe" };
+// const expected1 =
+//   "INSERT INTO users (first_name, last_name) VALUES ('John', 'Doe');";
 
-// Bonus:
-const insertData2 = {
-  first_name: "John",
-  last_name: "Doe",
-  age: 30,
-  is_admin: false,
-};
-const expected2 =
-  "INSERT INTO users (first_name, last_name, age, is_admin) VALUES ('John', 'Doe', 30, false);";
-// Explanation: no quotes around the int or the bool, technically in SQL the bool would become a 0 or 1, but don't worry about that here.
+// // Bonus:
+// const insertData2 = {
+//   first_name: "John",
+//   last_name: "Doe",
+//   age: 30,
+//   is_admin: false,
+// };
+// const expected2 =
+//   "INSERT INTO users (first_name, last_name, age, is_admin) VALUES ('John', 'Doe', 30, false);";
+// // Explanation: no quotes around the int or the bool, technically in SQL the bool would become a 0 or 1, but don't worry about that here.
 
 /**
  * Generates a SQL insert statement from the inputs
@@ -181,23 +181,109 @@ const expected2 =
 function insert(tableName, columnValuePairs) {
   let values = ""
   let variables = ""
-  for(const [key,val] of Object.entries(columnValuePairs)){
+  for (const [key, val] of Object.entries(columnValuePairs)) {
     variables = variables.concat(key + ", ");
-    typeof(val) == 'string' ? values = values.concat("'"+ val + "', ") : values = values.concat(val + ", ")
+    typeof (val) == 'string' ? values = values.concat("'" + val + "', ") : values = values.concat(val + ", ")
   }
-  values = values.slice(0,values.length - 2);
-  variables = variables.slice(0,variables.length - 2);
-  return ('"INSERT INTO ' + tableName +'(' + variables + ') VALUES (' + values + ');"')
+  values = values.slice(0, values.length - 2);
+  variables = variables.slice(0, variables.length - 2);
+  return ('"INSERT INTO ' + tableName + '(' + variables + ') VALUES (' + values + ');"')
 
 }
 
-function insertFunctional(tableName, columnValuePairs){
+function insertFunctional(tableName, columnValuePairs) {
   const variables = Object.keys(columnValuePairs).join(", ");
-  const vals = Object.values(columnValuePairs).map((val) =>{
+  const vals = Object.values(columnValuePairs).map((val) => {
     return typeof val === "string" ? `'${val}'` : val;
   }).join(", ")
 
   return `INSERT INTO ${tableName} (${variables}) VALUES (${vals});`
 }
-console.log(insertFunctional(table, insertData1));
-console.log(insertFunctional(table, insertData2));
+// console.log(insertFunctional(table, insertData1));
+// console.log(insertFunctional(table, insertData2));
+
+/* 
+  Given an id, an object that has keys with corresponding updated values, and an array of objects.
+  Find the object by "id" key that matches the given id value and then update that object's
+  keys with the provided new values.
+  Return the updated object, or null if no object was found
+*/
+
+const students = [
+  {
+    id: 1,
+    name: "student1",
+    isLateToday: false,
+    lateCount: 15,
+    redBeltStatus: false,
+  },
+  {
+    id: 2,
+    name: "student2",
+    isLateToday: false,
+    lateCount: 1,
+    redBeltStatus: false,
+  },
+  {
+    id: 3,
+    name: "student3",
+    isLateToday: false,
+    lateCount: 0,
+    redBeltStatus: false,
+  },
+];
+
+const id1 = 3;
+const updateData1 = { redBeltStatus: true, isLateToday: true };
+const expected1 = {
+  id: 3,
+  name: "student3",
+  isLateToday: true,
+  lateCount: 0,
+  redBeltStatus: true,
+};
+
+const id2 = 1;
+const updateData2 = {
+  isLateToday: true,
+  lateCount: 16,
+  randomKey: "randomValue",
+};
+const expected2 = {
+  id: 1,
+  name: "student1",
+  isLateToday: true,
+  lateCount: 16,
+  redBeltStatus: false,
+};
+/* 
+Explanation: In this implementation
+  randomKey was not added because it is not an existing key that can be updated
+*/
+
+const id3 = 5;
+const updateData3 = {};
+const expected3 = null;
+
+/**
+* Finds the specified obj by id and updates it with the given key value pairs.
+* - Time: O(?).
+* - Space: O(?).
+* @param {number} id
+* @param {Object} updatedVals Key value pairs used to update the found obj.
+* @param {Array<Object>} collection
+* @returns {?Object} The object that was updated or null if no object found.
+*/
+function findByIdAndUpdate(id, updatedVals, collection) {
+  const objToUpdate = collection.filter((student) => student.id == id);
+  if (objToUpdate.length < 1) return null;
+
+  for (const [key,val] of Object.entries(updatedVals)){
+    objToUpdate[0][`${key}`] = val;
+  }
+  return objToUpdate[0]
+}
+
+console.log(findByIdAndUpdate(id1,updateData1,students))
+console.log(findByIdAndUpdate(id2,updateData2,students))
+console.log(findByIdAndUpdate(id3,updateData3,students))
