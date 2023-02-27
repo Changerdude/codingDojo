@@ -209,61 +209,61 @@ function insertFunctional(tableName, columnValuePairs) {
   Return the updated object, or null if no object was found
 */
 
-const students = [
-  {
-    id: 1,
-    name: "student1",
-    isLateToday: false,
-    lateCount: 15,
-    redBeltStatus: false,
-  },
-  {
-    id: 2,
-    name: "student2",
-    isLateToday: false,
-    lateCount: 1,
-    redBeltStatus: false,
-  },
-  {
-    id: 3,
-    name: "student3",
-    isLateToday: false,
-    lateCount: 0,
-    redBeltStatus: false,
-  },
-];
+// const students = [
+//   {
+//     id: 1,
+//     name: "student1",
+//     isLateToday: false,
+//     lateCount: 15,
+//     redBeltStatus: false,
+//   },
+//   {
+//     id: 2,
+//     name: "student2",
+//     isLateToday: false,
+//     lateCount: 1,
+//     redBeltStatus: false,
+//   },
+//   {
+//     id: 3,
+//     name: "student3",
+//     isLateToday: false,
+//     lateCount: 0,
+//     redBeltStatus: false,
+//   },
+// ];
 
-const id1 = 3;
-const updateData1 = { redBeltStatus: true, isLateToday: true };
-const expected1 = {
-  id: 3,
-  name: "student3",
-  isLateToday: true,
-  lateCount: 0,
-  redBeltStatus: true,
-};
+// const id1 = 3;
+// const updateData1 = { redBeltStatus: true, isLateToday: true };
+// const expected1 = {
+//   id: 3,
+//   name: "student3",
+//   isLateToday: true,
+//   lateCount: 0,
+//   redBeltStatus: true,
+// };
 
-const id2 = 1;
-const updateData2 = {
-  isLateToday: true,
-  lateCount: 16,
-  randomKey: "randomValue",
-};
-const expected2 = {
-  id: 1,
-  name: "student1",
-  isLateToday: true,
-  lateCount: 16,
-  redBeltStatus: false,
-};
-/* 
-Explanation: In this implementation
-  randomKey was not added because it is not an existing key that can be updated
-*/
+// const id2 = 1;
+// const updateData2 = {
+//   isLateToday: true,
+//   lateCount: 16,
+//   randomKey: "randomValue",
+// };
+// const expected2 = {
+//   id: 1,
+//   name: "student1",
+//   isLateToday: true,
+//   lateCount: 16,
+//   redBeltStatus: false,
+// };
+// /* 
+// Explanation: In this implementation
+//   randomKey was not added because it is not an existing key that can be updated
+// */
 
-const id3 = 5;
-const updateData3 = {};
-const expected3 = null;
+// const id3 = 5;
+// const updateData3 = {};
+// const expected3 = null;
 
 /**
 * Finds the specified obj by id and updates it with the given key value pairs.
@@ -278,12 +278,169 @@ function findByIdAndUpdate(id, updatedVals, collection) {
   const objToUpdate = collection.filter((student) => student.id == id);
   if (objToUpdate.length < 1) return null;
 
-  for (const [key,val] of Object.entries(updatedVals)){
+  for (const [key, val] of Object.entries(updatedVals)) {
     objToUpdate[0][`${key}`] = val;
   }
   return objToUpdate[0]
 }
 
-console.log(findByIdAndUpdate(id1,updateData1,students))
-console.log(findByIdAndUpdate(id2,updateData2,students))
-console.log(findByIdAndUpdate(id3,updateData3,students))
+// console.log(findByIdAndUpdate(id1,updateData1,students))
+// console.log(findByIdAndUpdate(id2,updateData2,students))
+// console.log(findByIdAndUpdate(id3,updateData3,students))
+
+/* 
+  Given an array of person objects with the following keys:
+    firstName[string]
+    lastName[string]
+    friends[arr of friend objects]
+    isSocialDistancing[bool]
+    Friend object keys:
+      firstName[string]
+      lastName[string]
+      isSocialDistancing[bool]
+      hasCovid[bool]
+    return a new array of the names of people (not friends) who are at high risk of infection
+    A person is at high risk of catching the virus if they meet all the below criteria:
+    1. not practicing social distancing
+    2. have a friend who is not practicing social distancing whom hasCovid
+    Bonus: after solving it, make a 2nd solution to practice functional programming with built in methods
+*/
+
+// const friend1 = {
+//   firstName: "Friend",
+//   lastName: "One",
+//   isSocialDistancing: false,
+//   hasCovid: true,
+// };
+
+// const friend2 = {
+//   firstName: "Friend",
+//   lastName: "Two",
+//   isSocialDistancing: false,
+//   hasCovid: true,
+// };
+
+// const friend3 = {
+//   firstName: "Friend",
+//   lastName: "Three",
+//   isSocialDistancing: false,
+//   hasCovid: false,
+// };
+
+// const people = [
+//   {
+//     firstName: "Person",
+//     lastName: "One",
+//     isSocialDistancing: false,
+//     friends: [friend2, friend3],
+//   },
+//   {
+//     firstName: "Person",
+//     lastName: "Two",
+//     isSocialDistancing: true,
+//     friends: [friend2, friend1],
+//   },
+//   {
+//     firstName: "Person",
+//     lastName: "Three",
+//     isSocialDistancing: false,
+//     friends: [friend2, friend1],
+//   },
+// ];
+
+// const expected = ["Person One", "Person Three"];
+
+/**
+ * @typedef {Object} Friend
+ * @property {string} firstName
+ * @property {string} lastName
+ * @property {boolean} isSocialDistancing
+ * @property {boolean} hasCovid
+ *
+ * @typedef {Object} Person
+ * @property {Array<Friend>} friends
+ * @property {string} firstName
+ * @property {string} lastName
+ * @property {boolean} isSocialDistancing
+ */
+
+/**
+ * Finds the people who are at risk of contracting Covid.
+ * - Time O(?).
+ * - Space O(?).
+ * @param {Array<Person>} persons
+ * @returns {Array<string>} An array of Person full names for those people who
+ *    are at risk. A Person is at risk if:
+ *    1. not practicing social distancing.
+ *    2. have a friend who is not practicing social distancing whom hasCovid.
+ */
+function coronaVirusAtRisk(persons) { }
+
+/**
+ * - Time O(?).
+ * - Space O(?).
+ */
+const coronaVirusAtRiskFunctional = (persons) =>
+  persons.filter((person) => person.isSocialDistancing === false &&
+    person.friends.findIndex((friend) => friend.hasCovid && !friend.isSocialDistancing) > -1
+  ).map((person) => `${person.firstName} ${person.lastName}`)
+
+
+// console.log(coronaVirusAtRiskFunctional(people));
+
+/* 
+  Given to me (Neil) in an interview
+  Given a string
+  return whether or not it's possible to make a palindrome out of the string's
+  characters.
+  What is it about a string that makes it possible for it to become a
+  palindrome?
+*/
+const str1 = "";
+const expected1 = false;
+
+const str2 = "a";
+const expected2 = true;
+
+const str3 = "ddaa";
+const expected3 = true;
+// Explanation: "daad" or "adda"
+
+const str4 = "dda";
+const expected4 = true;
+// Explanation: "dad"
+
+const str5 = "aaadd";
+const expected5 = true;
+// Explanation: "daaad"
+
+const str6 = "abc";
+const expected6 = false;
+
+/**
+ * Determines whether or not it is possible for the string's characters to be
+ * rearranged into a palindrome.
+ * - Space: O(?).
+ * - Time: O(?).
+ * @param {string} str
+ * @returns {boolean} Whether the given str can be rearranged into a palindrome.
+ */
+function canStringBecomePalindrome(str) {
+  if (str.length == 0) {
+    return false;
+  }
+
+  const oddMap = {};
+  for( let i = 0; i < str.length; i++){
+    !oddMap.hasOwnProperty(str[i]) ? oddMap[str[i]] = 1 : delete oddMap[str[i]];
+  }
+
+    return Object.keys(oddMap).length <= 1;
+
+}
+console.log(canStringBecomePalindrome(str1))
+console.log(canStringBecomePalindrome(str2))
+console.log(canStringBecomePalindrome(str3))
+console.log(canStringBecomePalindrome(str4))
+console.log(canStringBecomePalindrome(str5))
+console.log(canStringBecomePalindrome(str6))
