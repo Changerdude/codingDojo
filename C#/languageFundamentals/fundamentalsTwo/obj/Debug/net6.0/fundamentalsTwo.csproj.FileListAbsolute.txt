@@ -1,0 +1,15 @@
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsTwo\bin\Debug\net6.0\fundamentalsTwo.exe
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsTwo\bin\Debug\net6.0\fundamentalsTwo.deps.json
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsTwo\bin\Debug\net6.0\fundamentalsTwo.runtimeconfig.json
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsTwo\bin\Debug\net6.0\fundamentalsTwo.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsTwo\bin\Debug\net6.0\fundamentalsTwo.pdb
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsTwo\obj\Debug\net6.0\fundamentalsTwo.csproj.AssemblyReference.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsTwo\obj\Debug\net6.0\fundamentalsTwo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsTwo\obj\Debug\net6.0\fundamentalsTwo.AssemblyInfoInputs.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsTwo\obj\Debug\net6.0\fundamentalsTwo.AssemblyInfo.cs
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsTwo\obj\Debug\net6.0\fundamentalsTwo.csproj.CoreCompileInputs.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsTwo\obj\Debug\net6.0\fundamentalsTwo.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsTwo\obj\Debug\net6.0\refint\fundamentalsTwo.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsTwo\obj\Debug\net6.0\fundamentalsTwo.pdb
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsTwo\obj\Debug\net6.0\fundamentalsTwo.genruntimeconfig.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsTwo\obj\Debug\net6.0\ref\fundamentalsTwo.dll
