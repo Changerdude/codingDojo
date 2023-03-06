@@ -1,0 +1,15 @@
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\drinkMaker\obj\Debug\net6.0\drinkMaker.csproj.AssemblyReference.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\drinkMaker\obj\Debug\net6.0\drinkMaker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\drinkMaker\obj\Debug\net6.0\drinkMaker.AssemblyInfoInputs.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\drinkMaker\obj\Debug\net6.0\drinkMaker.AssemblyInfo.cs
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\drinkMaker\obj\Debug\net6.0\drinkMaker.csproj.CoreCompileInputs.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\drinkMaker\bin\Debug\net6.0\drinkMaker.exe
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\drinkMaker\bin\Debug\net6.0\drinkMaker.deps.json
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\drinkMaker\bin\Debug\net6.0\drinkMaker.runtimeconfig.json
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\drinkMaker\bin\Debug\net6.0\drinkMaker.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\drinkMaker\bin\Debug\net6.0\drinkMaker.pdb
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\drinkMaker\obj\Debug\net6.0\drinkMaker.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\drinkMaker\obj\Debug\net6.0\refint\drinkMaker.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\drinkMaker\obj\Debug\net6.0\drinkMaker.pdb
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\drinkMaker\obj\Debug\net6.0\drinkMaker.genruntimeconfig.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\drinkMaker\obj\Debug\net6.0\ref\drinkMaker.dll
