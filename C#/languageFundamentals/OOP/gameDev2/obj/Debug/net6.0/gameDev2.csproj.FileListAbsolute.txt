@@ -1,0 +1,15 @@
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\gameDev2\obj\Debug\net6.0\gameDev2.csproj.AssemblyReference.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\gameDev2\obj\Debug\net6.0\gameDev2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\gameDev2\obj\Debug\net6.0\gameDev2.AssemblyInfoInputs.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\gameDev2\obj\Debug\net6.0\gameDev2.AssemblyInfo.cs
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\gameDev2\obj\Debug\net6.0\gameDev2.csproj.CoreCompileInputs.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\gameDev2\bin\Debug\net6.0\gameDev2.exe
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\gameDev2\bin\Debug\net6.0\gameDev2.deps.json
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\gameDev2\bin\Debug\net6.0\gameDev2.runtimeconfig.json
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\gameDev2\bin\Debug\net6.0\gameDev2.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\gameDev2\bin\Debug\net6.0\gameDev2.pdb
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\gameDev2\obj\Debug\net6.0\gameDev2.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\gameDev2\obj\Debug\net6.0\refint\gameDev2.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\gameDev2\obj\Debug\net6.0\gameDev2.pdb
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\gameDev2\obj\Debug\net6.0\gameDev2.genruntimeconfig.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\gameDev2\obj\Debug\net6.0\ref\gameDev2.dll
