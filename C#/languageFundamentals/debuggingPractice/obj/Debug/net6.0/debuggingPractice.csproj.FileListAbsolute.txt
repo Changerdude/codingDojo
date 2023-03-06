@@ -1,0 +1,15 @@
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\debuggingPractice\obj\Debug\net6.0\debuggingPractice.csproj.AssemblyReference.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\debuggingPractice\obj\Debug\net6.0\debuggingPractice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\debuggingPractice\obj\Debug\net6.0\debuggingPractice.AssemblyInfoInputs.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\debuggingPractice\obj\Debug\net6.0\debuggingPractice.AssemblyInfo.cs
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\debuggingPractice\obj\Debug\net6.0\debuggingPractice.csproj.CoreCompileInputs.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\debuggingPractice\bin\Debug\net6.0\debuggingPractice.exe
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\debuggingPractice\bin\Debug\net6.0\debuggingPractice.deps.json
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\debuggingPractice\bin\Debug\net6.0\debuggingPractice.runtimeconfig.json
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\debuggingPractice\bin\Debug\net6.0\debuggingPractice.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\debuggingPractice\bin\Debug\net6.0\debuggingPractice.pdb
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\debuggingPractice\obj\Debug\net6.0\debuggingPractice.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\debuggingPractice\obj\Debug\net6.0\refint\debuggingPractice.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\debuggingPractice\obj\Debug\net6.0\debuggingPractice.pdb
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\debuggingPractice\obj\Debug\net6.0\debuggingPractice.genruntimeconfig.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\debuggingPractice\obj\Debug\net6.0\ref\debuggingPractice.dll
