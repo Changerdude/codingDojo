@@ -1,0 +1,15 @@
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\rideMaker\obj\Debug\net6.0\rideMaker.csproj.AssemblyReference.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\rideMaker\obj\Debug\net6.0\rideMaker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\rideMaker\obj\Debug\net6.0\rideMaker.AssemblyInfoInputs.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\rideMaker\obj\Debug\net6.0\rideMaker.AssemblyInfo.cs
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\rideMaker\obj\Debug\net6.0\rideMaker.csproj.CoreCompileInputs.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\rideMaker\bin\Debug\net6.0\rideMaker.exe
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\rideMaker\bin\Debug\net6.0\rideMaker.deps.json
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\rideMaker\bin\Debug\net6.0\rideMaker.runtimeconfig.json
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\rideMaker\bin\Debug\net6.0\rideMaker.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\rideMaker\bin\Debug\net6.0\rideMaker.pdb
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\rideMaker\obj\Debug\net6.0\rideMaker.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\rideMaker\obj\Debug\net6.0\refint\rideMaker.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\rideMaker\obj\Debug\net6.0\rideMaker.pdb
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\rideMaker\obj\Debug\net6.0\rideMaker.genruntimeconfig.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\rideMaker\obj\Debug\net6.0\ref\rideMaker.dll

@@ -87,7 +87,7 @@ static Dictionary<string,string> GenerateDictionary(List<string> Names, List<int
 {
     Dictionary<string,string> NewDictionary = new Dictionary<string, string>();
     for(int i = 0; i < Names.Count; i++){
-        NewDictionary.Add(Names[i],Numbers[i].ToString());
+        NewDictionary.Add(Names[i],Numbers[i].ToString()); //Added toString to use prior print dictionary function
     }
     return NewDictionary;
 }
