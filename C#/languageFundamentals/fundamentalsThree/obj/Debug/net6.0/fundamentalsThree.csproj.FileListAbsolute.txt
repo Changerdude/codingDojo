@@ -1,0 +1,15 @@
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsThree\bin\Debug\net6.0\fundamentalsThree.exe
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsThree\bin\Debug\net6.0\fundamentalsThree.deps.json
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsThree\bin\Debug\net6.0\fundamentalsThree.runtimeconfig.json
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsThree\bin\Debug\net6.0\fundamentalsThree.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsThree\bin\Debug\net6.0\fundamentalsThree.pdb
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsThree\obj\Debug\net6.0\fundamentalsThree.csproj.AssemblyReference.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsThree\obj\Debug\net6.0\fundamentalsThree.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsThree\obj\Debug\net6.0\fundamentalsThree.AssemblyInfoInputs.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsThree\obj\Debug\net6.0\fundamentalsThree.AssemblyInfo.cs
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsThree\obj\Debug\net6.0\fundamentalsThree.csproj.CoreCompileInputs.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsThree\obj\Debug\net6.0\fundamentalsThree.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsThree\obj\Debug\net6.0\refint\fundamentalsThree.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsThree\obj\Debug\net6.0\fundamentalsThree.pdb
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsThree\obj\Debug\net6.0\fundamentalsThree.genruntimeconfig.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\fundamentalsThree\obj\Debug\net6.0\ref\fundamentalsThree.dll
