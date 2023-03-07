@@ -1,4 +1,4 @@
-class Vehicle{
+abstract class Vehicle{
     private string Name;
     private int PassangerLimit;
     private string Color;

@@ -1,0 +1,15 @@
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\fuelUp\obj\Debug\net6.0\fuelUp.csproj.AssemblyReference.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\fuelUp\obj\Debug\net6.0\fuelUp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\fuelUp\obj\Debug\net6.0\fuelUp.AssemblyInfoInputs.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\fuelUp\obj\Debug\net6.0\fuelUp.AssemblyInfo.cs
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\fuelUp\obj\Debug\net6.0\fuelUp.csproj.CoreCompileInputs.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\fuelUp\bin\Debug\net6.0\fuelUp.exe
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\fuelUp\bin\Debug\net6.0\fuelUp.deps.json
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\fuelUp\bin\Debug\net6.0\fuelUp.runtimeconfig.json
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\fuelUp\bin\Debug\net6.0\fuelUp.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\fuelUp\bin\Debug\net6.0\fuelUp.pdb
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\fuelUp\obj\Debug\net6.0\fuelUp.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\fuelUp\obj\Debug\net6.0\refint\fuelUp.dll
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\fuelUp\obj\Debug\net6.0\fuelUp.pdb
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\fuelUp\obj\Debug\net6.0\fuelUp.genruntimeconfig.cache
+C:\Users\Kurt\Documents\codingDojo\C#\languageFundamentals\OOP\fuelUp\obj\Debug\net6.0\ref\fuelUp.dll
