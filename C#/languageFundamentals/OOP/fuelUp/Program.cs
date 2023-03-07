@@ -12,7 +12,7 @@ List<INeedFuel> needFuel = new List<INeedFuel>();
 foreach (var vehicle in vehicles)
 {
     if((vehicle is INeedFuel)){
-        needFuel.Add(vehicle as INeedFuel);
+        needFuel.Add((vehicle as INeedFuel)!);
     }
 }
 needFuel.ConvertAll<int>(vehicle => vehicle.FuelTotal+=10);
