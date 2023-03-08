@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container rounded shadow bg-dark text-light p-4 my-3">
+        @model FormData
+        <form asp-action="Submit" asp-controller="Home" method="post" class="w-50 mx-auto p-4">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control">
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Location" class="form-label"></label>
+                <select asp-for="Location" class="form-select">
+                    <option selected value="Seattle">Seattle</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Online">Online</option>
+                </select>
+                <span class="text-danger" asp-validation-for="Location"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Language" class="form-label"></label>
+                <select asp-for="Language" class="form-select">
+                    <option selected value="C#">C#</option>
+                    <option value="Java">Java</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="Python">Python</option>
+                </select>
+                <span class="text-danger" asp-validation-for="Language"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Comment" class="form-label">Comment</label>
+                <textarea class="form-control" asp-for="Comment" rows="3"></textarea>
+                <span class="text-danger" asp-validation-for="Comment"></span>
+            </div>
+            <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>
