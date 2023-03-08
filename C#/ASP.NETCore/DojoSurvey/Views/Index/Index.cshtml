@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>DojoSurvey</title>
+</head>
+<body>
+    <div class="container rounded shadow bg-dark text-light p-4 my-3">
+        <form action="submit" method="post" class="w-50 mx-auto p-4">
+            <div class="mb-3">
+                <label for="inputName" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="inputName" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="inputLocation" class="form-label">Dojo Location:</label>
+                <select name="location" id="inputLocation" class="form-select">
+                    <option selected value="Seattle">Seattle</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="San Jose">San Jose</option>
+                    <option value="Online">Online</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="inputLanguage" class="form-label">Favorite Language:</label>
+                <select name="language" id="inputLanguage" class="form-select">
+                    <option selected value="C#">C#</option>
+                    <option value="Java">Java</option>
+                    <option value="Javascript">Javascript</option>
+                    <option value="Python">Python</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="inputComment" class="form-label">Comment</label>
+                <textarea class="form-control" id="inputComment" name="comment" rows="3"></textarea>
+            </div>
+            <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
