@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container rounded shadow bg-dark text-light p-4 my-3">
+        @model FormData
+        <form asp-action="Submit" asp-controller="Home" method="post" class="w-50 mx-auto p-4">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control">
+                <span class="text-danger" asp-validation-for="Name"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control">
+                <span class="text-danger" asp-validation-for="Email"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Date" class="form-label"></label>
+                <input asp-for="Date" class="form-control">
+                <span class="text-danger" asp-validation-for="Date"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" class="form-control">
+                <span class="text-danger" asp-validation-for="Password"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="OddNumber" class="form-label">Favorite Odd Number</label>
+                <input asp-for="OddNumber" class="form-control">
+                <span class="text-danger" asp-validation-for="OddNumber"></span>
+            </div>
+            
+            <button class="btn btn-primary">Submit</button>
+        </form>
+    </div>

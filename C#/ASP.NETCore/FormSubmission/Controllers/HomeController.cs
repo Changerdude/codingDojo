@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using DateValidator.Models;
+using FormSubmission.Models;
 
-namespace DateValidator.Controllers;
+namespace FormSubmission.Controllers;
 
 public class HomeController : Controller
 {
@@ -17,20 +17,24 @@ public class HomeController : Controller
     {
         return View();
     }
-    
-    public IActionResult Privacy()
-    {
-        return View();
-    }
 
     [HttpPost("/submit")]
     public IActionResult Submit(FormData Data){
         if(ModelState.IsValid){
-            if(Data.Comment == null) Data.Comment = "No Comments";
-            return RedirectToAction("Index", Data);
+            return RedirectToAction("Success", Data);
         } else {
             return View("Index");
         }
+    }
+
+    public IActionResult Success()
+    {
+        return View();
+    }
+
+    public IActionResult Privacy()
+    {
+        return View();
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
