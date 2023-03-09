@@ -26,8 +26,12 @@ public class HomeController : Controller
     }
 
     [HttpGet("Dashboard")]
-    public ViewResult Dashboard(){
-        return View("Dashboard");
+    public IActionResult Dashboard(){
+        if(HttpContext.Session.GetString("Username") != null){
+            return View("Dashboard");
+        } else {
+            return RedirectToAction("Index");
+        }
     }
 
     [HttpPost("Math")]
