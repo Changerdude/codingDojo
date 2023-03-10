@@ -8,21 +8,21 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Profile2
 build_property.RootNamespace = Profile2
-build_property.ProjectDir = C:\Users\Kurt\Documents\codingDojo\C#\ASP.NETCore\Profile2\
+build_property.ProjectDir = c:\Users\Kurt\Documents\codingDojo\C#\ASP.NETCore\Profile2\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Kurt\Documents\codingDojo\C#\ASP.NETCore\Profile2
+build_property.MSBuildProjectDirectory = c:\Users\Kurt\Documents\codingDojo\C#\ASP.NETCore\Profile2
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Kurt/Documents/codingDojo/C\#/ASP.NETCore/Profile2/Views/Index/Contact.cshtml]
+[c:/Users/Kurt/Documents/codingDojo/C\#/ASP.NETCore/Profile2/Views/Index/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kZXhcQ29udGFjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kurt/Documents/codingDojo/C\#/ASP.NETCore/Profile2/Views/Index/Index.cshtml]
+[c:/Users/Kurt/Documents/codingDojo/C\#/ASP.NETCore/Profile2/Views/Index/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kZXhcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Kurt/Documents/codingDojo/C\#/ASP.NETCore/Profile2/Views/Index/Projects.cshtml]
+[c:/Users/Kurt/Documents/codingDojo/C\#/ASP.NETCore/Profile2/Views/Index/Projects.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kZXhcUHJvamVjdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

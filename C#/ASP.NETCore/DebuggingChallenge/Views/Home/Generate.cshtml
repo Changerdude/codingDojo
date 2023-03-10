@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Generator";
+}
+
+<div class="text-center">
+    <h2>Welcome, @Context.Session.GetString("Username") from @Context.Session.GetString("Locaton")</h2>
+    <h2>Here is your randomly generated passcode:</h2>
+    <h1 class="passcode">@Context.Session.GetString("Passcode")</h1>
+    <div class="d-flex mx-auto w-25 justify-content-center">
+        <form action="reset">
+            <label>Not you?</label>
+            <input type="submit" value="Log out" class="btn btn-danger">
+        </form>
+        <form action="generate/new" method="post">
+            <label>Want a new code?</label>
+            <input type="submit" value="New code" class="btn btn-info">
+        </form>
+    </div>
+</div>
