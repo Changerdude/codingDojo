@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<Dish>
+<div class="text-center w-50  mx-auto">
+    <h1 class="display-4 mb-4">Welcome to CRUDelicious</h1>
+    <p>Check out some recent dishes!</p>
+    <hr/>
+
+    @{
+        foreach (Dish dish in Model)
+        {
+            <p><a href="/dishes/@dish.DishId">@dish.Name</a> by @dish.Chef</p>
+        }
+    }
+</div>
