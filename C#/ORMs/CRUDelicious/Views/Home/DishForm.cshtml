@@ -2,8 +2,8 @@
     ViewData["Title"] = @ViewBag.IsEdit == "true" ? "Edit Dish" : "Add Dish" ;
 }
 @model Dish
-<div class="text-center w-50 mx-auto">
-    <h1 class="display-4 mb-4">@(ViewBag.IsEdit == "true" ? "Edit " + Model.Name : "Add a new Dish" )</h1>
+<div class="w-50 mx-auto">
+    <h1 class="text-center display-4 mb-4">@(ViewBag.IsEdit == "true" ? "Edit " + Model.Name : "Add a new Dish" )</h1>
     <form asp-action=@(ViewBag.IsEdit == "true" ? "Update" :  "Create")  asp-controller="Home" asp-route-id=@(ViewBag.IsEdit == "true" ? Model.DishId : null) method="post" class="d-flex">
         <div class="flex-grow-1 p-2">
             <div class="mb-3">
@@ -21,6 +21,7 @@
                 <input asp-for="Calories" class="form-control">
                 <span class="text-danger" asp-validation-for="Calories"></span>
             </div>
+        </div>
             <div class="p-2">
                 <label asp-for="Tastiness" class="form-label"></label>
                 <select asp-for="Tastiness" class="form-select">
@@ -38,8 +39,9 @@
                     <textarea asp-for="Description" class="form-control"></textarea>
                     <span class="text-danger" asp-validation-for="Description"></span>
                 </div>
+                <div class="d-flex justify-content-end">
                 <button class="btn btn-primary">@(ViewBag.IsEdit == "true" ? "Edit Dish" : "Add Dish")</button>
+                </div>
             </div>
-        </div>
     </form>
 </div>

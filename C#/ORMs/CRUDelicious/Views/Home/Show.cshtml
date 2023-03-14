@@ -11,7 +11,7 @@
     <p class="fw-semibold f2-3 mb-2">Calories: @Model.Calories</p>
     <p class="fw-semibold f2-3 mb-2">Tastiness: @Model.Tastiness</p>
     <div class="d-flex justify-content-around">
-        <a href="/dishes/@Model.DishId/destroy" class="btn btn-danger">Delete</a>
-        <a href="/dishes/@Model.DishId/edit" class="btn btn-warning">Edit</a>
+        <a asp-action="Destroy" asp-controller="Home" asp-route-id="@Model.DishId" class="btn btn-danger">Delete</a>
+        <a asp-action="Edit" asp-controller="Home" asp-route-id="@Model.DishId" class="btn btn-warning">Edit</a>
     </div>
 </div>

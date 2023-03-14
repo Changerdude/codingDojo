@@ -51,11 +51,11 @@ public class HomeController : Controller
 
     [HttpGet("/dishes/{id}/edit")]
     public IActionResult Edit(int id){
-        ViewBag.IsEdit = "true";
         Dish? dish = _context.Dishes.FirstOrDefault(d => d.DishId == id);
         if(dish == null){
             return RedirectToAction("Index");
         } else {
+            ViewBag.IsEdit = "true";
             return View("DishForm", dish);
         }
     }

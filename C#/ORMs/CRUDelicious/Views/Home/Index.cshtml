@@ -11,7 +11,7 @@
     @{
         foreach (Dish dish in Model)
         {
-            <p><a href="/dishes/@dish.DishId">@dish.Name</a> by @dish.Chef</p>
+            <p><a asp-action="Show" asp-controller="Home" asp-route-id="@dish.DishId">@dish.Name</a> by @dish.Chef</p>
         }
     }
 </div>
