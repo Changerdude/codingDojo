@@ -1,0 +1,31 @@
+@model ViewModel
+
+<form asp-action="CreateUser" asp-controller="Home" method="post">
+    <h3 class="mb-3">Register User</h3>
+    <div class="mb-3">
+        <label asp-for="User.FirstName" class="form-label">First Name</label>
+        <input asp-for="User.FirstName" class="form-control">
+        <span class="text-danger" asp-validation-for="User.FirstName"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="User.LastName" class="form-label">Last Name</label>
+        <input asp-for="User.LastName" class="form-control">
+        <span class="text-danger" asp-validation-for="User.LastName"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="User.Email" class="form-label"></label>
+        <input asp-for="User.Email" class="form-control">
+        <span class="text-danger" asp-validation-for="User.Email"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="User.Password" class="form-label"></label>
+        <input asp-for="User.Password" class="form-control">
+        <span class="text-danger" asp-validation-for="User.Password"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="User.PwConfirm" class="form-label">Confirm Password</label>
+        <input asp-for="User.PwConfirm" class="form-control">
+        <span class="text-danger" asp-validation-for="User.PwConfirm"></span>
+    </div>
+    <button class="btn btn-primary">Register</button>
+</form>
