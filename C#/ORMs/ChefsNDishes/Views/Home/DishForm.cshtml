@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Chefs";
+}
+
+@model DishFormViewModel
+<div class="container w-50 mx-auto border shadow p-3 mt-4">
+    <h1 class="display-4 text-center mb-2">Add a dish</h1>
+    <hr class="mb-4">
+    <form asp-action="DishCreate" asp-controller="Home" method="post" class="d-flex justify-content-evenly gap-4">
+        <div>
+            <div class="mb-3">
+                <label asp-for="Dish.Name" class="form-label">Name of Dish</label>
+                <input asp-for="Dish.Name" class="form-control">
+                <span class="text-danger" asp-validation-for="Dish.Name"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Dish.Calories" class="form-label">Number of Calories</label>
+                <input asp-for="Dish.Calories" class="form-control">
+                <span class="text-danger" asp-validation-for="Dish.Calories"></span>
+            </div>
+        </div>
+        <div>
+            <label asp-for="Dish.ChefId" class="form-label">Chef's Name</label>
+            <select asp-for="Dish.ChefId" class="form-select">
+            @foreach(Chef Chef in Model.AllChefs)
+            {
+                <option value=@(Chef.ChefId)>@Chef.FirstName @Chef.LastName</option>
+            }
+            </select>
+        </div>
+        <div>
+            <label asp-for="Dish.Tastiness" class="form-label">Tastiness</label>
+            <select asp-for="Dish.Tastiness" class="form-select mb-4">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <button class="btn btn-primary">Add Dish</button>
+        </div>
+    </form>
+</div>
