@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Products";
+}
+@model MyViewModel
+<div class="container w-75 mx-auto border shadow p-3 mt-4">
+    <div class="d-flex justify-content-evenly">
+        <div class="border-end border-dark p-3 flex-grow-1">
+            <h1 class="text-center display-4 mb-4">New Product</h1>
+            <form asp-action="ProductCreate" asp-controller="Product" method="post">
+                <div class="mb-3">
+                    <label asp-for="Product.Name" class="form-label">Name:</label>
+                    <input asp-for="Product.Name" class="form-control">
+                    <span class="text-danger" asp-validation-for="Product.Name"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Product.Description" class="form-label">Description:</label>
+                    <input asp-for="Product.Description" class="form-control">
+                    <span class="text-danger" asp-validation-for="Product.Description"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Product.Price" class="form-label">Price:</label>
+                    <input asp-for="Product.Price" class="form-control">
+                    <span class="text-danger" asp-validation-for="Product.Price"></span>
+                </div>
+                <button class="btn btn-primary">Add Product</button>
+            </form>
+        </div>
+        <div class="border-start border-dark p-3 flex-grow-1 d-flex flex-column">
+            <h1 class="text-center display-4 mb-4">All Products</h1>
+            @foreach (Product Product in Model.Products)
+            {
+                <a asp-action="ProductShow" asp-controller="Product" asp-route-ProductId=@Product.ProductId class="link-secondary mb-2">@Product.Name</a>
+            }
+        </div>
+    </div>
+</div>

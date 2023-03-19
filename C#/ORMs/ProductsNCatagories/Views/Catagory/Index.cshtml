@@ -1,0 +1,26 @@
+@{
+    ViewData["Title"] = "Catagories";
+}
+@model MyViewModel
+<div class="container w-75 mx-auto border shadow p-3 mt-4">
+    <div class="d-flex justify-content-evenly flex-grow-1">
+        <div class="border-end border-dark p-3">
+            <h1 class="text-center display-4 mb-4">New Catagory</h1>
+            <form asp-action="CatagoryCreate" asp-controller="Catagory" method="post">
+                <div class="mb-3">
+                    <label asp-for="Catagory.Name" class="form-label">Name:</label>
+                    <input asp-for="Catagory.Name" class="form-control">
+                    <span class="text-danger" asp-validation-for="Catagory.Name"></span>
+                </div>
+                <button class="btn btn-primary">Add Catagory</button>
+            </form>
+        </div>
+        <div class="border-start border-dark p-3 flex-grow-1 d-flex flex-column">
+            <h1 class="text-center display-4 mb-4">All Catagories</h1>
+            @foreach (Catagory Catagory in Model.Catagories)
+            {
+                <a asp-action="CatagoryShow" asp-controller="Catagory" asp-route-CatagoryId=@Catagory.CatagoryId class="link-secondary mb-2">@Catagory.Name</a>
+            }
+        </div>
+    </div>
+</div>
