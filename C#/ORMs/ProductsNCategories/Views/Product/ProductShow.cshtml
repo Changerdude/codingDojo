@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Product Page";
+}
+@model MyViewModel
+<div class="container w-75 mx-auto border shadow p-3 mt-4">
+    <h1 class="text-center display-4">@Model.Product.Name</h1>
+    <div class="d-flex justify-content-evenly">
+        <div class="text-center flex-grow-1">
+            <h1 class="display-6">Categories</h1>
+            @{
+            List<Category?> ProductCategories = new List<Category> ();
+            foreach (ProdCatRelation Relation in Model.Product.ProdCatRelations)
+            {
+                <p class="mb-2">@Relation.Category.Name  |  <a asp-action="ProductRelationDestroy" asp-controller="Product" asp-route-RelationId=@Relation.ProdCatRelationId asp-route-ProductId=@Relation.ProductId class="link-danger">Remove</a></p>
+                ProductCategories.Add(Relation.Category);
+            }
+            }
+        </div>
+        <div class="d-flex flex-column align-items-center flex-grow-1">
+            <form asp-action="ProductRelationCreate" asp-controller="Product" method="post">
+                <input type="hidden" asp-for="Relation.ProductId" value=@Model.Product.ProductId>
+                <div class="mb-3">
+                    <label asp-for="Relation.CategoryId" class="form-label">Add Category</label>
+                    <select asp-for="Relation.CategoryId" class="form-select">
+                        @{
+                        List<Category> RemainingCategory = Model.Categories.Except(ProductCategories).ToList();
+                        foreach (Category Category in RemainingCategory)
+                        {
+                            <option value=@Category.CategoryId>@Category.Name</option>
+                        }
+                        }
+                    </select>
+                    <span class="text-danger" asp-validation-for="Relation.CategoryId"></span>
+                </div>
+                <button class="btn btn-primary">Add Category</button>
+            </form>
+        </div>
+    </div>
+</div>
