@@ -71,6 +71,7 @@ public class WeddingController : Controller
         return RedirectToAction("Index");
     }
 
+    [SessionCheck]
     [HttpGet("/weddings/rsvp/{WeddingId}")]
     public IActionResult WeddingRSVPToggle(int WeddingId){
         bool isUser = _context.Users.Any(u => u.UserId == HttpContext.Session.GetInt32("UUID"));

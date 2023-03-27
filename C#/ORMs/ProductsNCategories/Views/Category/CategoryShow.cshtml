@@ -1,5 +1,5 @@
 @{
-    ViewData["Title"] = "Category Page";
+ViewData["Title"] = "Category Page";
 }
 @model MyViewModel
 <div class="container w-75 mx-auto border shadow p-3 mt-4">
@@ -9,11 +9,13 @@
             <h1 class="display-6">Products</h1>
             @{
             List<Product> CategoryProducts = new List<Product> ();
-            foreach (ProdCatRelation Relation in Model.Category.ProdCatRelations)
-            {
-                <p class="mb-2">@Relation.Product.Name  |  <a asp-action="CategoryRelationDestroy" asp-controller="Category" asp-route-RelationId=@Relation.ProdCatRelationId asp-route-CategoryId=@Relation.CategoryId class="link-danger">Remove</a></p>
+                foreach (ProdCatRelation Relation in Model.Category.ProdCatRelations)
+                {
+                <p class="mb-2">@Relation.Product.Name | <a asp-action="CategoryRelationDestroy"
+                        asp-controller="Category" asp-route-RelationId=@Relation.ProdCatRelationId
+                        asp-route-CategoryId=@Relation.CategoryId class="link-danger">Remove</a></p>
                 CategoryProducts.Add(Relation.Product);
-            }
+                }
             }
         </div>
         <div class="d-flex flex-column align-items-center flex-grow-1">
@@ -24,10 +26,10 @@
                     <select asp-for="Relation.ProductId" class="form-select">
                         @{
                         List<Product> RemainingProduct = Model.Products.Except(CategoryProducts).ToList();
-                        foreach (Product Product in RemainingProduct)
-                        {
+                            foreach (Product Product in RemainingProduct)
+                            {
                             <option value=@Product.ProductId>@Product.Name</option>
-                        }
+                            }
                         }
                     </select>
                     <span class="text-danger" asp-validation-for="Relation.ProductId"></span>
